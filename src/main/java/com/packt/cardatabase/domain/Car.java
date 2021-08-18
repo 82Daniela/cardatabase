@@ -1,4 +1,4 @@
-package com.packt.domain;
+package com.packt.cardatabase.domain;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -22,6 +22,10 @@ public class Car {
     private int year;
     @Column(nullable = false)
     private  int price;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="owner_id")
+    private Owner owner;
 
     public String getBrand() {
         return brand;
@@ -69,6 +73,14 @@ public class Car {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 
     @Override
