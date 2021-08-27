@@ -24,7 +24,7 @@ public class CardatabaseApplication {
 
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner runner(){
 
 		return args->{
@@ -59,6 +59,6 @@ public class CardatabaseApplication {
 
 
 		};
-	}
+	}*/
 
 }
