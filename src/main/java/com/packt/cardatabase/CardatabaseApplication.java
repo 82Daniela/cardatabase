@@ -38,6 +38,7 @@ public class CardatabaseApplication {
 			user.setUsername("user");
 			user.setPassword("\"$2a$04$1.YhMIgNX/8TkCKGFUONWO1waedKhQ5KrnB30fl0Q01QKqmzLf.Zi\"");
 			user.setRole("USER");
+			userRepository.save(user);
 
 
 		};
